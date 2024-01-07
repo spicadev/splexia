@@ -15,7 +15,7 @@ argsUtil.validateObject = function(arg, rules, context) {
       }
     } else if('accept' in rule && 
               (typeof rule.accept == 'string' && rule.accept != typeof value) ||
-              (typeof rule.accept == 'functiom' && !(value instanceof rule.accept))) {
+              (typeof rule.accept == 'function' && !(value instanceof rule.accept))) {
       throw new Error('Property ' + rule.key + ' only accept value as ' + rule.accept + '.')
     }
   return arg
