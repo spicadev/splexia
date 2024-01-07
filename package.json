@@ -18,5 +18,8 @@
       "require": "src/index.js",
       "import": "esm/index.mjs"
     }
+  },
+  "scripts": {
+    "test": "echo 'No test specified'"
   }
 }
