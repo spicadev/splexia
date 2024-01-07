@@ -2,7 +2,7 @@ var argsUtil = require('./utility/argsUtil')
 var lexer = module.exports = exports = {}
 
 lexer.regexBased = function regexBasedLexer(options) {
-  argsUtil.validate(options, [
+  argsUtil.validateObject(options, [
     'rules', { key: 'onError', default: console.error }
   ])
 
@@ -10,7 +10,7 @@ lexer.regexBased = function regexBasedLexer(options) {
 }
 
 lexer.charLoop = function charLoopLexer(options) {
-  argsUtil.valdate(options, [
+  argsUtil.validateObject(options, [
     { key: 'onChar', accept: 'function' }, { key: 'onError', default: console.error }
   ])
 
