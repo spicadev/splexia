@@ -1,0 +1,22 @@
+{
+  "publishConfig": {
+    "access": "public",
+    "tag": "dev"
+  },
+  "name": "splexia",
+  "description": "Splexia is a javascript library whicy simpifly programming language creation.",
+  "version": "0.0.0-development",
+  "author": "@spicadev (https://github.com/spicadev)",
+  "repository": "github:spicadev/splexia",
+  "license": "MIT",
+  "keywords": [
+    "splexia", "lexer", "parser", "interpreter"
+  ],
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "require": "src/index.js",
+      "import": "esm/index.mjs"
+    }
+  }
+}
