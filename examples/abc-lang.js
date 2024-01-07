@@ -1,7 +1,7 @@
 const splexia = require('splexia')
 const abc = {}
 
-abc.lexer = splexia.lexer.charLoop({
+abc.lex = splexia.lexer.charLoop({
   onChar: function(char) {
     if(char === '/' && this.peek(1) === '*') {
       this.i += 2
@@ -31,7 +31,11 @@ abc.lexer = splexia.lexer.rulesBased({
 })
 */
 
-abc.lexer(`
+const tokens = abc.lex(`
 /* This is a comment */
 'String Works!'
 `)
+
+abc.parse = splexia.parser()
+
+abc.parse(tokens)
