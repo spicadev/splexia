@@ -65,6 +65,8 @@ function Parser(options) {
         options.onError(err)
       }
     }
+
+    return output
   }
 }
 
