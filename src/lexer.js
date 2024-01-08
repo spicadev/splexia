@@ -29,8 +29,16 @@ lexer.charLoop = function charLoopLexer(options) {
         output.push(data)
       }
     }
+    Object.defineProperty(state, 'ok', {
+      get: function() {
+        return state.i < state.length
+      },
+      set: function(v) {
+        return state.ok
+      }
+    })
 
-    for(; state.i < input.length; state.i++) {
+    for(; state.ok; state.i++) {
       try {
         options.onChar.call(state, input[state.i])
       } catch(err) {
