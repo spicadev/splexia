@@ -18,5 +18,6 @@ argsUtil.validateObject = function(arg, rules, context) {
               (typeof rule.accept == 'function' && !(value instanceof rule.accept))) {
       throw new Error('Property ' + rule.key + ' only accept value as ' + rule.accept + '.')
     }
+  }
   return arg
 }
